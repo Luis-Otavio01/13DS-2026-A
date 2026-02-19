@@ -38,19 +38,6 @@
   }
 }
 
-.switch {
-    display: flex;
-    align-items: center;
-}
-.switch.dark {
-    background-color: #333;
-    color: white;
-}
-.switch.light {
-    background-color: #fff;
-    color: black;
-}
-
 .light #Switch button {
   animation: slide-in 0.2s forwards;
 }

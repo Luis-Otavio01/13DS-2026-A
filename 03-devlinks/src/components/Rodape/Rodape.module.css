@@ -8,14 +8,3 @@ footer {
     text-decoration: none;
   }
 }
-
-.rodape {
-    background-color: #f1f1f1;
-    padding: 10px;
-    text-align: center;
-}
-.rodape-link {
-    margin: 0 10px;
-    color: #333;
-    text-decoration: none;
-}

@@ -1,11 +1,11 @@
 import React from "react";
-import "./Link.module.css";
+import styles from "./Link.module.css";
 
-const Link = ({ href, children }) => {
+const Link = ({ url, children }) => {
   return (
-    <a href={href} className="link">
-      {children}
-    </a>
+    <li>
+      <a href={url}>{children}</a>
+    </li>
   );
 };
 

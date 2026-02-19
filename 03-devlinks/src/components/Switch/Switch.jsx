@@ -1,19 +1,15 @@
-import React, { useState } from 'react';
-import './Switch.module.css';
+import React from "react";
+import styles from "./Switch.module.css";
 
-const Switch = () => {
-    const [isDarkMode, setIsDarkMode] = useState(false);
-
-    const toggleSwitch = () => {
-        setIsDarkMode(!isDarkMode);
-    };
-
-    return (
-        <div className={`switch ${isDarkMode ? 'dark' : 'light'}`}> 
-            <label className="switch-label">Modo {isDarkMode ? 'Escuro' : 'Claro'}</label>
-            <input type="checkbox" onChange={toggleSwitch} />
-        </div>
-    );
+const Switch = ({ troca, isLight }) => {
+  return (
+    <div className={isLight ? styles.light : ""}>
+      <div onClick={troca} id={styles.Switch}>
+        <button></button>
+        <span></span>
+      </div>
+    </div>
+  );
 };
 
 export default Switch;

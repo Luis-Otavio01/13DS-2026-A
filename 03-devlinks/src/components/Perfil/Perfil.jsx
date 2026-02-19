@@ -1,11 +1,11 @@
 import React from "react";
-import "./Perfil.module.css";
+import styles from "./Perfil.module.css";
 
-const Perfil = ({ user }) => {
+const Perfil = ({ children, fotoPerfil }) => {
   return (
-    <div className="perfil">
-      <img src={user.image} alt={user.name} className="perfil-image" />
-      <h2 className="perfil-name">{user.name}</h2>
+    <div id={styles.Perfil}>
+      <img src={fotoPerfil} alt="" />
+      <p>@{children}</p>
     </div>
   );
 };
