@@ -1,9 +1,23 @@
 import "./App.css";
 
+import logo from "./assets/devflix.png";
+import lupa from "./assets/search.svg";
+import Rodape from "./components/Rodape/Rodape";
 const App = () => {
   return (
-    <div>App</div>
-  )
-}
+    <div id="App">
+      <img
+        src={logo}
+        alt="logo da plataforma de streaming DEVFLIX, destaque vermelho e preto, ideal para quem busca serviços de streaming de filmes e séries."
+      />
 
-export default App
+      <div className="search">
+        <input type="text" placeholder="Pesquisar filmes, séries e mais..." />
+        <img role="button" src={lupa} alt="Botão de ação para pesquisa!" />
+      </div>
+      <Rodape>Batata</Rodape>
+    </div>
+  );
+};
+
+export default App;
