@@ -1,0 +1,21 @@
+footer {
+  text-align: center;
+  font-size: 14px;
+  padding-top: 24px;
+
+  & a {
+    color: var(--text-color);
+    text-decoration: none;
+  }
+}
+
+.rodape {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+}
+.rodape-link {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+}

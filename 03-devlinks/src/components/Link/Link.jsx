@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import "./Link.module.css";
 
-const Link = ({ url, children }) => {
+const Link = ({ href, children }) => {
   return (
-    <li>
-      <a href={url}>{children}</a>
-    </li>
+    <a href={href} className="link">
+      {children}
+    </a>
   );
 };
 
-export default Link
+export default Link;
