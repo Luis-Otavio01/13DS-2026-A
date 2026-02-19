@@ -15,7 +15,7 @@ const App = () => {
         <input type="text" placeholder="Pesquisar filmes, séries e mais..." />
         <img role="button" src={lupa} alt="Botão de ação para pesquisa!" />
       </div>
-      <Rodape>Batata</Rodape>
+      <Rodape link={"https://github.com/Luis-Otavio01"}>Batata</Rodape>
     </div>
   );
 };
