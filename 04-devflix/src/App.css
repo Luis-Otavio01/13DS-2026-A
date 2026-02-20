@@ -111,10 +111,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
   #App {
     padding: 4rem 2rem;
   }
@@ -134,7 +134,7 @@ body {
   }
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width: 400px) {
   #App {
     padding: 4rem 1rem;
   }

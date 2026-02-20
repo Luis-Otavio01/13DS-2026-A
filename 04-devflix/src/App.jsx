@@ -25,7 +25,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    searchMovies(""); //Pesquisa
+    searchMovies("Hulk"); // termo para pesquina ao carregar o site
   }, []);
 
   return (
@@ -38,7 +38,7 @@ const App = () => {
 
       <div className="search">
         <input
-        onKeyDown={(e) => e ==="Enter" && searchMovies(search)}
+          onKeyDown={(e) => e.key === "Enter" && searchMovies(search)}
           onChange={(e) => setSearch(e.target.value)}
           type="text"
           placeholder="Pesquise por filmes"
@@ -53,14 +53,14 @@ const App = () => {
       {movies?.length > 0 ? (
         <div className="container">
           {movies.map((movie, index) => (
-            <MovieCard key={index} {...movie} />
+            <MovieCard key={index} {...movie} apiUrl={apiUrl} />
           ))}
         </div>
       ) : (
         <h2 className="empty">😢 Filme não encontrado 😢</h2>
       )}
 
-      <Rodape link={"https://github.com/Luis-Otavio01"}>Batata</Rodape>
+      <Rodape link={"https://github.com/ProfCastello"}>ProfCastello</Rodape>
     </div>
   );
 };
