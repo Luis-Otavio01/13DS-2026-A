@@ -9,6 +9,7 @@ import MovieCard from "./components/MovieCard/MovieCard";
 
 const App = () => {
   const [movies, setMovies] = useState([]);
+  const [search, setSearch] = useState("");
 
   //Utilizando uma CHAVE de API do arquivo .env
   const apiKey = import.meta.env.VITE_OMDB_API_KEY;
@@ -36,24 +37,28 @@ const App = () => {
       />
 
       <div className="search">
-        <input type="text" placeholder="Pesquise por filmes" />
-        <img onClick={() => searchMovies("Chainsaw Man")}src={lupa} alt="Botão de ação para pesquisa!" />
+        <input
+        onKeyDown={(e) => e ==="Enter" && searchMovies(search)}
+          onChange={(e) => setSearch(e.target.value)}
+          type="text"
+          placeholder="Pesquise por filmes"
+        />
+        <img
+          onClick={() => searchMovies(search)}
+          src={lupa}
+          alt="Botão de ação para pesquisa!"
+        />
       </div>
 
-      {movies?.length > 0 ?
-      (
+      {movies?.length > 0 ? (
         <div className="container">
-        {movies.map((movie, index) => (
-          <MovieCard key={index} {...movie} />
-        ))}
-      </div>
-      )
-      : 
-      (
+          {movies.map((movie, index) => (
+            <MovieCard key={index} {...movie} />
+          ))}
+        </div>
+      ) : (
         <h2 className="empty">😢 Filme não encontrado 😢</h2>
-      )
-      }
-      
+      )}
 
       <Rodape link={"https://github.com/Luis-Otavio01"}>Batata</Rodape>
     </div>
