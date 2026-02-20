@@ -24,7 +24,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    searchMovies("Jujutsu");
+    searchMovies(""); //Pesquisa
   }, []);
 
   return (
@@ -50,7 +50,7 @@ const App = () => {
       )
       : 
       (
-        <h2>😢 Filme não encontrado 😢</h2>
+        <h2 className="empty">😢 Filme não encontrado 😢</h2>
       )
       }
       
