@@ -37,7 +37,7 @@ const App = () => {
 
       <div className="search">
         <input type="text" placeholder="Pesquise por filmes" />
-        <img src={lupa} alt="Botão de ação para pesquisa!" />
+        <img onClick={() => searchMovies("Chainsaw Man")}src={lupa} alt="Botão de ação para pesquisa!" />
       </div>
 
       {movies?.length > 0 ?
